@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
-  // Handle normal page changes
+  // Handle normal page changes with smooth scrolling
   useEffect(() => {
     if (!hash) {
       window.scrollTo({

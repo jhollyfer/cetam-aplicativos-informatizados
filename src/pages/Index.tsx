@@ -35,19 +35,19 @@ const Index = () => {
       <Header />
       <Hero />
       
-      <section id="projetos" className="container py-16 animate-fade-in">
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold mb-3 text-white">Projetos dos Alunos</h2>
-          <p className="text-tech-200 max-w-3xl mx-auto">
+      <section id="projetos" className="container py-12 md:py-16 animate-fade-in">
+        <div className="mb-8 md:mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">Projetos dos Alunos</h2>
+          <p className="text-tech-200 max-w-3xl mx-auto px-4 md:px-0">
             Conheça os projetos desenvolvidos pelos alunos da disciplina de Aplicativos Informatizados
             do curso Técnico em Administração.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-10 px-2">
           <button
             onClick={() => handleCategoryClick(null)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+            className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-sm font-medium transition-all
               ${selectedCategory === null 
                 ? 'bg-tech-500 text-white' 
                 : 'bg-tech-800 text-tech-200 hover:bg-tech-700'}`}
@@ -58,7 +58,7 @@ const Index = () => {
             <button
               key={category}
               onClick={() => handleCategoryClick(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+              className={`px-3 py-1 md:px-4 md:py-2 rounded-full text-sm font-medium transition-all
                 ${selectedCategory === category 
                   ? 'bg-tech-500 text-white' 
                   : 'bg-tech-800 text-tech-200 hover:bg-tech-700'}`}
@@ -73,10 +73,10 @@ const Index = () => {
 
       <StudentsSection />
 
-      <section id="sobre" className="bg-tech-900 py-16">
-        <div className="container">
-          <div className="bg-tech-800/50 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-white text-center">Sobre a Disciplina</h2>
+      <section id="sobre" className="bg-tech-900 py-12 md:py-16">
+        <div className="container px-4 md:px-8">
+          <div className="bg-tech-800/50 backdrop-blur-sm rounded-xl p-4 md:p-8 max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white text-center">Sobre a Disciplina</h2>
             <p className="text-tech-100 mb-4">
               A disciplina de Aplicativos Informatizados do curso Técnico em Administração 
               tem como objetivo capacitar os alunos com conhecimentos práticos sobre as tecnologias 

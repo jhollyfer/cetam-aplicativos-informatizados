@@ -1,45 +1,49 @@
 
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Student {
   name: string;
-  finalScore: string;
 }
 
 const students: Student[] = [
-  { name: "ADENILSON ALMEIDA TAPUDIMA", finalScore: "10,00" },
-  { name: "ALEXANDRA FERREIRA MILITAO", finalScore: "9,30" },
-  { name: "ALTERMAN LIMAO GUERREIRO", finalScore: "9,80" },
-  { name: "AURIANE AIAMBO LIMA", finalScore: "9,50" },
-  { name: "CAROLINE MARINHO DA SILVA", finalScore: "10,00" },
-  { name: "CONCEICAO AZEVEDO DE ARAUJO", finalScore: "10,00" },
-  { name: "EMINA LEOPOLDINO JOAQUIM", finalScore: "9,50" },
-  { name: "EURENICE DA SILVA GOMES", finalScore: "10,00" },
-  { name: "FERNANDA DA SILVA INACIO", finalScore: "9,50" },
-  { name: "FRANCISCO NEGREIROS DA SILVA NETO", finalScore: "10,00" },
-  { name: "GILZIANDRE GUIMARAES BATALHA", finalScore: "10,00" },
-  { name: "JOSINEIA LIMA DE SOUZA", finalScore: "10,00" },
-  { name: "KAULI ROCHA VEIGA", finalScore: "10,00" },
-  { name: "KAUWANY FERNANDES ALVES", finalScore: "10,00" },
-  { name: "MARIA DA CONCEICAO DOS SANTOS BRITO", finalScore: "10,00" },
-  { name: "MARIA DOS REIS FARIAS", finalScore: "9,80" },
-  { name: "MARQUILENE GOMES PESO", finalScore: "10,00" },
-  { name: "NADIA ROBERTA DA SILVA NASCIMENTO", finalScore: "9,50" },
-  { name: "NAYARA LIMA RODRIGUES", finalScore: "9,50" },
-  { name: "NAYZE MOCAMBITE DE LIMA", finalScore: "9,50" },
-  { name: "NILCIENE PEREIRA CASTILHO", finalScore: "10,00" },
-  { name: "PATRICIA JUDITH DOS SANTOS CHAGAS", finalScore: "10,00" },
-  { name: "PEDRO GUILHERME TAPUDIMA DA COSTA", finalScore: "10,00" },
-  { name: "PEDRO VICTOR DA SILVA E SILVA", finalScore: "10,00" },
-  { name: "REGINA DA COSTA BARBOSA", finalScore: "10,00" },
-  { name: "RUBENS DA SILVA DE SOUZA", finalScore: "10,00" },
-  { name: "SARAH QUEZIA DA SILVA ARIMATEIA", finalScore: "10,00" },
-  { name: "TACIANY AZEVEDO DOS SANTOS", finalScore: "9,50" },
-  { name: "VALDEMIRO RODRIGUES DA ROCHA FILHO", finalScore: "9,50" },
-  { name: "VITORIA MARTINS TEIXEIRA", finalScore: "10,00" },
-  { name: "WAGNER COELHO PEREIRA", finalScore: "10,00" },
-  { name: "YANNE RAMOS CHUNHA", finalScore: "N/A" }
+  { name: "ADENILSON ALMEIDA TAPUDIMA" },
+  { name: "ALEXANDRA FERREIRA MILITAO" },
+  { name: "ALTERMAN LIMAO GUERREIRO" },
+  { name: "AURIANE AIAMBO LIMA" },
+  { name: "CAROLINE MARINHO DA SILVA" },
+  { name: "CONCEICAO AZEVEDO DE ARAUJO" },
+  { name: "EMINA LEOPOLDINO JOAQUIM" },
+  { name: "EURENICE DA SILVA GOMES" },
+  { name: "FERNANDA DA SILVA INACIO" },
+  { name: "FRANCISCO NEGREIROS DA SILVA NETO" },
+  { name: "GILZIANDRE GUIMARAES BATALHA" },
+  { name: "JOSINEIA LIMA DE SOUZA" },
+  { name: "KAULI ROCHA VEIGA" },
+  { name: "KAUWANY FERNANDES ALVES" },
+  { name: "MARIA DA CONCEICAO DOS SANTOS BRITO" },
+  { name: "MARIA DOS REIS FARIAS" },
+  { name: "MARQUILENE GOMES PESO" },
+  { name: "NADIA ROBERTA DA SILVA NASCIMENTO" },
+  { name: "NAYARA LIMA RODRIGUES" },
+  { name: "NAYZE MOCAMBITE DE LIMA" },
+  { name: "NILCIENE PEREIRA CASTILHO" },
+  { name: "PATRICIA JUDITH DOS SANTOS CHAGAS" },
+  { name: "PEDRO GUILHERME TAPUDIMA DA COSTA" },
+  { name: "PEDRO VICTOR DA SILVA E SILVA" },
+  { name: "REGINA DA COSTA BARBOSA" },
+  { name: "RUBENS DA SILVA DE SOUZA" },
+  { name: "SARAH QUEZIA DA SILVA ARIMATEIA" },
+  { name: "TACIANY AZEVEDO DOS SANTOS" },
+  { name: "VALDEMIRO RODRIGUES DA ROCHA FILHO" },
+  { name: "VITORIA MARTINS TEIXEIRA" },
+  { name: "WAGNER COELHO PEREIRA" },
+  { name: "YANNE RAMOS CHUNHA" }
 ];
 
 const StudentsSection = () => {
@@ -54,28 +58,29 @@ const StudentsSection = () => {
         </div>
         
         <div className="bg-tech-800/50 backdrop-blur-sm rounded-xl p-6 max-w-4xl mx-auto">
-          <ScrollArea className="h-[500px] w-full">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="text-tech-100 font-bold">Nome do Aluno</TableHead>
-                  <TableHead className="text-tech-100 font-bold text-right">Nota Final</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {students.map((student, index) => (
-                  <TableRow 
-                    key={index}
-                    className="animate-fade-in text-tech-100 hover:bg-tech-700/30"
+          <Carousel className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {students.map((student, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div 
+                    className="flex items-center justify-center h-32 p-4 rounded-lg bg-tech-700/30 text-tech-100 hover:bg-tech-600/40 transition-all cursor-pointer animate-fade-in"
                     style={{ animationDelay: `${index * 0.05}s` }}
                   >
-                    <TableCell className="font-medium">{student.name}</TableCell>
-                    <TableCell className="text-right">{student.finalScore}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </ScrollArea>
+                    <h3 className="text-center font-medium">{student.name}</h3>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-6 gap-2">
+              <CarouselPrevious className="relative static left-auto transform-none" />
+              <CarouselNext className="relative static right-auto transform-none" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
