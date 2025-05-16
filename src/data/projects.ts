@@ -37,5 +37,14 @@ export const projects: Project[] = [
     type: "Cosméticos",
     url: "https://preview--andiroba-pura-vida-land.lovable.app/",
     categories: ["Marketing", "Sustentabilidade", "Gestão"]
+  },
+  {
+    id: 5,
+    name: "Perfumaria Golden Whisper",
+    description: "Perfumaria multimarcas que oferece uma experiência sensorial única, com curadoria de fragrâncias nacionais e internacionais e atendimento personalizado.",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80&w=1000&auto=format&fit=crop",
+    type: "Perfumaria",
+    url: "https://preview--golden-whisper-landing-page.lovable.app/",
+    categories: ["Marketing", "Gestão", "CRM"]
   }
 ];
