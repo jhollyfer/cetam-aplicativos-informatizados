@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProjectGrid from "@/components/ProjectGrid";
+import StudentsSection from "@/components/StudentsSection";
 import Footer from "@/components/Footer";
 import { projects } from "@/data/projects";
 
@@ -69,6 +70,8 @@ const Index = () => {
 
         <ProjectGrid projects={filteredProjects} />
       </section>
+
+      <StudentsSection />
 
       <section id="sobre" className="bg-tech-900 py-16">
         <div className="container">
