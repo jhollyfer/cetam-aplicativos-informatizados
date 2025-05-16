@@ -17,6 +17,18 @@ const Index = () => {
     new Set(projects.flatMap(project => project.categories))
   );
 
+  const handleCategoryClick = (category: string | null) => {
+    setSelectedCategory(category);
+    
+    // Smooth scroll to projects section when category is clicked
+    const projectsSection = document.getElementById("projetos");
+    if (projectsSection) {
+      setTimeout(() => {
+        projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-tech-950 to-tech-900">
       <Header />
@@ -33,7 +45,7 @@ const Index = () => {
 
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           <button
-            onClick={() => setSelectedCategory(null)}
+            onClick={() => handleCategoryClick(null)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all
               ${selectedCategory === null 
                 ? 'bg-tech-500 text-white' 
@@ -44,7 +56,7 @@ const Index = () => {
           {categories.map(category => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryClick(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all
                 ${selectedCategory === category 
                   ? 'bg-tech-500 text-white' 
