@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: 2,
     name: "Flor da Pele",
     description: "Marca de produtos de cuidado facial que respeita a pele e o planeta, utilizando ingredientes naturais, formulações leves e resultados reais.",
-    image: "https://images.unsplash.com/photo-1614859324967-1cf4e2ec692a?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=1000&auto=format&fit=crop",
     type: "E-commerce",
     url: "https://preview--flor-da-pele-glow-page.lovable.app/",
     categories: ["Marketing", "Dados", "Gestão"]

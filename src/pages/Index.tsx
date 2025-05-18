@@ -87,11 +87,25 @@ const Index = () => {
               gerenciamento de dados, armazenamento em nuvem, CRM (Customer Relationship Management),
               estratégias de marketing digital e gerenciamento de redes.
             </p>
-            <p className="text-tech-100">
+            <p className="text-tech-100 mb-4">
               Os projetos apresentados nesta página são resultado do trabalho aplicado
               dos alunos, demonstrando sua compreensão sobre as ferramentas digitais
               e sua aplicação prática no contexto administrativo.
             </p>
+            <div className="flex flex-col md:flex-row items-center bg-tech-700/50 rounded-lg p-4 mt-6">
+              <div className="md:w-1/4 flex justify-center mb-4 md:mb-0">
+                <div className="w-24 h-24 rounded-full bg-tech-500 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">CETAM</span>
+                </div>
+              </div>
+              <div className="md:w-3/4 md:pl-6">
+                <h3 className="text-xl font-bold text-white mb-2">Centro Educacional Tecnológico do Amazonas</h3>
+                <p className="text-tech-100">
+                  Esta disciplina foi ministrada pelo CETAM, instituição referência em educação profissional e tecnológica no estado do Amazonas, 
+                  comprometida com o desenvolvimento de competências profissionais alinhadas às demandas do mercado de trabalho regional.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
